@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherApp.Pages.WeatherPage">
+    <ScrollView>
+      
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+       
+        <Image Source="sunny.jpg"
+               Aspect="AspectFit"
+               HeightRequest="80"
+               HorizontalOptions="Center" />
+
+        <!-- Search -->
+        <Frame BackgroundColor="#FFFFFF" CornerRadius="10" HasShadow="True">
+            <VerticalStackLayout Padding="10">
+                <Label Text="Enter City:"
+                       FontSize="14"
+                       TextColor="#666666" />
+                <Entry Placeholder="City name (e.g., Lisbon)"
+                       Text="{Binding City}"
+                       FontSize="18"
+                       TextColor="#333333" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <!-- GetWeather-->
+        <Button Text="Get Weather"
+                Command="{Binding GetWeatherCommand}"
+                BackgroundColor="#1E90FF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50" />
+ 
+        <Frame BackgroundColor="#FFFFFF" CornerRadius="15" HasShadow="True" Padding="15">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="City:" FontSize="18" TextColor="#333333" />
+                <Label Text="{Binding Weather.City}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <Label Text="Temperature:" FontSize="18" TextColor="#333333" />
+                <Label Text="{Binding Weather.Temperature}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <Label Text="Description:" FontSize="18" TextColor="#333333" />
+                <Label Text="{Binding Weather.Description}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <Label Text="Humidity:" FontSize="18" TextColor="#333333" />
+                <Label Text="{Binding Weather.Humidity}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <Label Text="Wind Speed:" FontSize="18" TextColor="#333333" />
+                <Label Text="{Binding Weather.WindSpeed}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+            </VerticalStackLayout>
+        </Frame>
+
+
+        <!-- AirQuality -->
+        <Button Text="Check AirQuality"
+            Command="{Binding GetAirPollutionCommand}"
+            BackgroundColor="#003366"
+            TextColor="White"
+            FontAttributes="Bold"
+            CornerRadius="10"
+            HeightRequest="50" />
+ 
+    
+    </VerticalStackLayout>
+</ScrollView>
+</ContentPage>

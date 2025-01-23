@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherApp.Pages.CuriositiesPage"
+              >
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Moon Curiosities"
+               FontSize="20"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#003366" />
+
+        <Frame BackgroundColor="#F0F0F0" CornerRadius="15" Padding="15" HasShadow="True">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="New Moon: During a new moon, the Moon is positioned between the Earth and the Sun, making its illuminated side face away from Earth. Ancient cultures often considered this phase as a time for new beginnings and planning."
+                      FontSize="14"
+                      TextColor="#666666"
+                      LineBreakMode="WordWrap" />
+
+                <Image Source="moonrise.jpg"
+                       Aspect="AspectFit"
+                       HeightRequest="150"
+                       HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Frame>
+
+
+        <Label Text="Humidity Curiosities"
+       FontSize="20"
+       FontAttributes="Bold"
+       HorizontalOptions="Center"
+       TextColor="#003366" />
+
+        <Frame BackgroundColor="#F0F0F0" CornerRadius="15" Padding="15" HasShadow="True">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="The human body is more sensitive to humidity than temperature alone. High humidity levels make it harder for sweat to evaporate, making you feel hotter, while low humidity can dry out your skin and respiratory system.Contrary to popular belief, deserts can have surprisingly high humidity at night due to cooler temperatures, even though they are extremely dry during the day."
+              FontSize="14"
+              TextColor="#666666"
+              LineBreakMode="WordWrap" />
+
+                <Image Source="humidity.jpg"
+               Aspect="AspectFit"
+               HeightRequest="150"
+               HorizontalOptions="Center" />
+            </VerticalStackLayout>
+        </Frame>
+    </VerticalStackLayout>
+    
+    
+    
+    
+</ContentPage>

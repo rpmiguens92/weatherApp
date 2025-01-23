@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherApp.Pages.HomePage"
+             >
+
+
+            <ScrollView Grid.Row="1">
+                <StackLayout Padding="10" Spacing="20">
+                    <Label Text="Welcome!"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           HorizontalTextAlignment="Center"
+                           TextColor="#003366" />
+
+                    <Label Text="A weather app lets you check the forecast, air quality, and even astronomy details like sunrise and sunset times. It often includes fun curiosities about weather patterns or seasonal changes, making it both practical and educational."
+                           FontSize="16"
+                           LineBreakMode="WordWrap"
+                           TextColor="Black" />
+
+                    <Image Source="hero.jpg"
+                           Aspect="AspectFit"
+                           HeightRequest="200"
+                           HorizontalOptions="Center" />
+
+
+                    <Label Text="Collaborations"
+                   FontSize="18"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="#99CCFF" />
+
+
+                    <Image Source="linkedin.jpg" 
+                    HeightRequest="120" 
+                   WidthRequest="120"
+                   HorizontalOptions="Center">
+                        <Image.Clip>
+                            <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60"/>
+                        </Image.Clip>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                        Tapped="OnLinkedInTapped"
+                        NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="Rita Miguéns"
+                   FontSize="14"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Black" />
+
+
+                    <Image Source="cinel.jpg"   
+                   HeightRequest="120" 
+                   WidthRequest="120"
+                   HorizontalOptions="Center">
+                        <Image.Clip>
+                            <EllipseGeometry Center="60,60" RadiusX="60" RadiusY="60"/>
+                        </Image.Clip>
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                        Tapped="OnLinkTapped"
+                         NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+
+                    <Label Text="This project was developed as part of the Technologies and Information Systems Programming course at CINEL. " 
+                    FontSize="14" 
+
+                    HorizontalTextAlignment="Center" 
+                    TextColor="Black"/>
+                    <Label Text=" 16/01/25 " 
+                    FontSize="10" 
+
+                    HorizontalTextAlignment="Center" 
+                    TextColor="Black"/>
+                    <Label Text=" version 2.0.0" 
+                    FontSize="10" 
+
+                    HorizontalTextAlignment="Center" 
+                    TextColor="Black"/>
+
+                </StackLayout>
+            </ScrollView>
+       
+</ContentPage>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="weatherApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:weatherApp.Pages"
+    Shell.FlyoutBehavior="Disabled"
+    Title="weatherApp">
+
+
+    <Shell.FlyoutHeader>
+        <StackLayout Padding="10" BackgroundColor="LightBlue">
+            <Label Text="Menu" 
+                   FontSize="18" 
+                   Grid.Row="2"
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   VerticalOptions="Center" />
+        </StackLayout>
+    </Shell.FlyoutHeader>
+
+    <ShellContent ContentTemplate="{DataTemplate local:MainPage}"
+     Route="MainPage" Shell.PresentationMode="Modal" />
+    <ShellContent ContentTemplate="{DataTemplate local:LoginPage}"
+     Route="LoginPage" Shell.PresentationMode="Modal" />
+    <ShellContent ContentTemplate="{DataTemplate local:AirPollutionPage}"
+  Route="AirPollutionPage" />
+
+
+    <ShellContent
+        Title="HomePage"
+        ContentTemplate="{DataTemplate local:HomePage}"
+        Route="HomePage" 
+        Icon="home.png"/>
+  
+    <ShellContent
+        Title="Astronomy"
+        ContentTemplate="{DataTemplate local:AstronomyPage}"
+        Route="AstronomyPage" 
+        Icon="astro.png"/>
+    
+    <ShellContent
+        Title="Weather"
+        ContentTemplate="{DataTemplate local:WeatherPage}"
+        Route="WeatherPage"
+        Icon="weatherrr.png"/>
+
+    <ShellContent
+      Title="Curiosities"
+      ContentTemplate="{DataTemplate local:CuriositiesPage}"
+      Route="CuriositiesPage" 
+      Icon="curiosities.png"/>
+
+
+
+    <ShellContent ContentTemplate="{DataTemplate local:MainPage}"
+     Route="MainPage" />
+    <ShellContent ContentTemplate="{DataTemplate local:LoginPage}"
+     Route="LoginPage" />
+    <ShellContent ContentTemplate="{DataTemplate local:AirPollutionPage}"
+  Route="AirPollutionPage" />
+    
+
+</Shell>

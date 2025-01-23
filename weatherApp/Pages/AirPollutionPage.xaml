@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherApp.Pages.AirPollutionPage"
+             >
+
+
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label Text="Air Quality"
+               FontSize="24"
+               FontAttributes="Bold"
+               HorizontalOptions="Center"
+               TextColor="#003366" />
+
+        <Frame BackgroundColor="#FFFFFF" CornerRadius="15" Padding="15" HasShadow="True">
+            <VerticalStackLayout Spacing="10">
+                <Label Text="Air Quality:" FontSize="18" TextColor="#333333" />
+                <Label Text="{Binding AirQuality}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+            </VerticalStackLayout>
+        </Frame>
+
+        <Frame BackgroundColor="#F0F0F0" CornerRadius="15" Padding="15" HasShadow="True">
+            <Label Text="The Air Quality Index is based on measurement of particulate matter (PM2.5 and PM10), Ozone (O3), Nitrogen Dioxide (NO2), Sulfur Dioxide (SO2) and Carbon Monoxide (CO) emissions. Most of the stations on the map are monitoring both PM2.5 and PM10 data, but there are few exceptions where only PM10 is available."
+                   FontSize="14"
+                   TextColor="#666666"
+                   LineBreakMode="WordWrap" />
+        </Frame>
+
+        <Image Source="airesqualidade.png"
+               Aspect="AspectFit"
+               HeightRequest="150"
+               HorizontalOptions="Center" />
+
+        <Button Text="back"
+        TextColor="Blue"
+        BackgroundColor="Transparent"
+        BorderWidth="0"
+        FontAttributes="Bold"
+        Clicked="OnVoltarClicked" />
+
+    </VerticalStackLayout>
+</ContentPage>

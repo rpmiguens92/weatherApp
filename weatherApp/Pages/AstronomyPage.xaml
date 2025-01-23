@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="weatherApp.Pages.AstronomyPage"
+              >
+    <VerticalStackLayout Padding="20" Spacing="15">
+
+        <Frame BackgroundColor="#FFFFFF" CornerRadius="10" HasShadow="True">
+            <VerticalStackLayout Padding="10">
+                <Label Text="Enter City:"
+                FontSize="14"
+                TextColor="#666666" />
+                <Entry Placeholder="City name (e.g., Lisbon)"
+                Text="{Binding City}"
+                FontSize="18"
+                TextColor="#333333" />
+            </VerticalStackLayout>
+        </Frame>
+
+        
+        <Frame BackgroundColor="#FFFFFF" CornerRadius="10" HasShadow="True">
+            <VerticalStackLayout Padding="10">
+                <Label Text="Enter Date:"
+                FontSize="14"
+                TextColor="#666666" />
+                <Entry Placeholder="Date (YYYY-MM-DD)"
+                Text="{Binding Date}"
+                FontSize="18"
+                TextColor="#333333" />
+            </VerticalStackLayout>
+        </Frame>
+
+        
+        <Button Text="Get Astronomy Data"
+         Command="{Binding GetAstronomyDataCommand}"
+         BackgroundColor="#1E90FF"
+         TextColor="White"
+         FontAttributes="Bold"
+         CornerRadius="10"
+         HeightRequest="50" />
+
+      
+        <Frame BackgroundColor="#FFFFFF" CornerRadius="15" HasShadow="True" Padding="15">
+            <StackLayout>
+                <!-- Sunrise -->
+                <Grid VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="sunrise.jpg" WidthRequest="30" HeightRequest="30" Grid.Column="0" />
+                    <Label Text="Sunrise:" FontSize="18" TextColor="#333333" Grid.Column="1" />
+                </Grid>
+                <Label Text="{Binding Sunrise}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <!-- Sunset -->
+                <Grid VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="sunset.jpg" WidthRequest="30" HeightRequest="30" Grid.Column="0" />
+                    <Label Text="Sunset:" FontSize="18" TextColor="#333333" Grid.Column="1" />
+                </Grid>
+                <Label Text="{Binding Sunset}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <!-- Moonrise -->
+                <Grid VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="moonrise.jpg" WidthRequest="30" HeightRequest="30" Grid.Column="0" />
+                    <Label Text="Moonrise:" FontSize="18" TextColor="#333333" Grid.Column="1" />
+                </Grid>
+                <Label Text="{Binding Moonrise}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <!-- Moonset -->
+                <Grid VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="moonset.jpg" WidthRequest="30" HeightRequest="30" Grid.Column="0" />
+                    <Label Text="Moonset:" FontSize="18" TextColor="#333333" Grid.Column="1" />
+                </Grid>
+                <Label Text="{Binding Moonset}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+
+                <!-- Moon Phase -->
+                <Grid VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Image Source="phases.jpg" WidthRequest="30" HeightRequest="30" Grid.Column="0" />
+                    <Label Text="Moon Phase:" FontSize="18" TextColor="#333333" Grid.Column="1" />
+                </Grid>
+                <Label Text="{Binding MoonPhase}" FontSize="18" FontAttributes="Bold" TextColor="#003366" />
+            </StackLayout>
+        </Frame>
+    </VerticalStackLayout>
+</ContentPage>
